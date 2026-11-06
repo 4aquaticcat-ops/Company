@@ -1,0 +1,315 @@
+@charset "UTF-8";
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+:root {
+    /**Coolors**/
+    --no-shadow:rgba(0,0,0,0.0);
+    --light-shadow: rgba(0, 0, 0, 0.3);
+    --dark-shadow: rgba(0, 0, 0, 0.8);
+    --overlay-color: rgba(158, 68, 4, 0.5);
+    --highlight-color: rgb(255, 255, 255);
+
+    /**Fonts**/
+    --text-font: 'Playfair Display', 'Lora', Calibri, 'Trebuchet MS', sans-serif;
+
+    /**Text Sizes**/
+    --body-text: 16px;
+    --h1-text: 2.0rem;
+    --h2-text: 1.5rem;
+
+    /**Other Sizes**/
+    --margin-size: 150px;
+
+    /**If you want to use gradients directly on text 
+    instead of the background, you can combine linear-gradient
+     with background-clip: text and color: transparent**/
+
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+    color: var(--overlay-color);
+    font-family: var(--text-font);
+    font-size: var(--body-text);
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;    
+}
+
+/*Responsive images*/
+img {
+    width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, p {
+    padding: 0; /**Padding does: Clears an area around the content. The padding is transparent**/
+    margin: 0; /**Margin does: Clears an area outside the border. The margin is transparent **/
+    background: linear-gradient(360deg, var(--dark-shadow), var(--light-shadow));
+    background-clip: text;
+}
+
+
+.logo {
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+    max-width: 200px;
+
+     /* Adjust the top margin as needed */
+ /* Adjust the size as needed */
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-flex {
+    background-color: rgb(102, 121, 24);
+    justify-content: center; /* Space between logo and navigation */
+    align-items: center; /* Vertically center the items */
+    position: fixed; /* Make the navbar fixed at the top */
+    width: 100%;
+    z-index: 1000; /* Ensure the navbar is above other content */
+    list-style-type: none;
+    margin: 0;
+    padding: 0 10px;
+
+    
+    a {
+    font-size: var(--h2-text);
+    color: var(--highlight-color);
+    text-decoration: none;
+    padding: 10px 15px; /* Adjust padding for clickable area */
+    }
+}
+
+.globnav {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        justify-content: center;
+    }
+
+}
+
+
+.globnav li {
+    display: flex;
+    margin: 0; /* Adjust spacing between items */
+}
+
+a {
+    cursor: pointer; /* Change cursor on hover */
+}
+
+.currentpage{
+    a{
+        text-decoration: underline;
+    }
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: break-word;
+
+}
+
+main { 
+    flex-grow: 1; /*or flex*/
+    padding: 0;
+    word-wrap: break-word;
+    margin: 0;
+}
+
+.hero-image{
+    margin-top: 100px;
+}
+
+.om {
+    margin-top: var(--margin-size);
+    padding: 10px;
+}
+
+
+.kontakt {
+    min-height: 200px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: row;
+    margin-top: var(--margin-size); /* Space above the footer */
+    padding: 20px; /* Space inside the footer */
+    gap: 20px; /* Adjust the gap between sections as needed */
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+    justify-content: center; /* Center the sections horizontally */
+
+
+/*     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 10px; */
+}
+
+.kontakt div{
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+}
+
+.kontaktform{
+    border-radius: 5px;
+    padding: 20px;
+    
+}
+
+input[type=text], select, textarea{
+    color: var(--dark-shadow);
+    width:100%;
+    padding: 12px;
+    border: 1px solid var(--overlay-color);
+    border-radius: 5px;
+}
+
+input[type=submit]{
+    cursor:pointer;
+    border-radius: 5px;
+}
+
+input[type=submit]:hover{
+    background-color: var(--overlay-color);
+}
+
+
+
+.menydiv{
+    margin-top: var(--margin-size);
+}
+
+.dricka-meny{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: top;
+    padding: 0 10px;
+    margin: 0;
+}
+
+.dricka {
+    margin: 0;
+    padding: 0 10px;
+}
+
+.hr-meny {
+    color: var(--overlay-color);
+    width: 50%;
+}
+
+
+footer {
+    background-color: var(--overlay-color);
+    color: var(--highlight-color);
+    min-height: 200px; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px; /* Space above the footer */
+    padding: 20px; /* Space inside the footer */
+    gap: 20px; /* Adjust the gap between sections as needed */
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+    justify-content: center; /* Center the sections horizontally */
+}
+
+footer ul {
+    font-size: var(--body-text); /* Adjust the font size as needed */
+    list-style-type: none;
+    padding: 0; /* Adjust spacing between items */
+    margin: 0; /* Remove default margin */
+}
+
+footer li {
+    display: flex;
+    padding: 0; /* Adjust spacing between items */
+}
+
+footer img {
+    max-width: 10%; /* Adjust the size of the social media icons */
+}
+
+.footer-column {
+    max-width: 300px; /* Adjust the max width as needed */
+    padding: 10px;
+    background-color: var(--overlay-color); /* Optional: Add a background color */
+    border-radius: 50px; /* Optional: Add rounded corners */
+}
+
+/*481px – 768px större mobiler*/
+@media screen and (min-width: 480px){
+            .navbar-flex {
+            background-color: var(--overlay-color);
+        }
+    .hero-image{
+    margin-top: 0;
+}
+
+}
+/*769px – 1024px surfplattor/liggande läge*/
+@media screen and (min-width: 769px){
+
+
+    .dricka-meny{
+            flex-direction: row;
+    }    
+    .logo{
+            max-width: 200px;
+    }
+
+}
+/*1025px – 1200px laptops*/
+@media screen and (min-width: 1025px){
+
+            .kontakt div{
+                max-width: 50%;
+            }
+
+
+
+}
+/*1201px - uppåt*/
+@media screen and (min-width: 1201px){
+
+    .logo{
+            max-width: 200px;
+    }
+footer img {
+    max-width: 15%; /* Adjust the size of the social media icons */
+}
+
+.hoverimg {
+    max-width: 50%;
+}
+
+}
+
